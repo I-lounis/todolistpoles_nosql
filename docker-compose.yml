@@ -1,7 +1,7 @@
 services:
   php:
     build: .
-    container_name: php_app
+    container_name: php_todolist
     volumes:
       - .:/var/www/html
     depends_on:
@@ -20,7 +20,7 @@ services:
 
   mongo:
     image: mongo:latest
-    container_name: mongodb_todolist
+    container_name: mongodb
     restart: always
     ports:
       - "27017:27017"
